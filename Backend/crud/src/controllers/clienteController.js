@@ -3,10 +3,14 @@ const db = require('../config/db');
 // Create
 exports.createCliente = async (req, res) => {
     const { nombre, direccion, telefono, email } = req.body;
+    console.log('Datos recibidos:', nombre, direccion, telefono, email);
     try {
         const [result] = await db.execute('CALL sp_create_cliente(?, ?, ?, ?)', [nombre, direccion, telefono, email]);
+        console.log('Resultado de la inserción:', result);
         res.status(201).send({ id: result.insertId });
     } catch (error) {
+        console.error('Error al crear el cliente:', error);
+        console.log('Datos del cuerpo de la solicitud:', req.body);
         res.status(500).send({ error: error.message });
     }
 };
@@ -40,10 +44,19 @@ exports.getClienteById = async (req, res) => {
 exports.updateCliente = async (req, res) => {
     const { id } = req.params;
     const { nombre, direccion, telefono, email } = req.body;
+    console.log('ID del cliente:', id);
+    console.log('Datos del cliente:', nombre, direccion, telefono, email);
+    console.log('Cuerpo de la solicitud:', req.body); // Agrega esta línea
     try {
-        await db.execute('CALL sp_update_cliente(?, ?, ?, ?, ?)', [id, nombre, direccion, telefono, email]);
-        res.status(200).send({ message: 'Cliente actualizado' });
+        if (nombre !== undefined && direccion !== undefined && telefono !== undefined && email !== undefined) {
+            await db.execute('UPDATE Cliente SET Nombre = ?, Dirección = ?, Teléfono = ?, Email = ? WHERE ClienteID = ?', 
+                            [nombre, direccion, telefono, email, id]);
+            res.status(200).send({ message: 'Cliente actualizado' });
+        } else {
+            res.status(400).send({ error: 'Faltan datos del cliente' });
+        }
     } catch (error) {
+        console.error('Error al actualizar el cliente:', error);
         res.status(500).send({ error: error.message });
     }
 };
