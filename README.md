@@ -1,6 +1,14 @@
 # Base_datos_ecci_final
 Este repositorio tiene como finalidad mostrar el codigo usado para crear la base de datos de nuestra aplicacion para administrar servidores y el diagrama ER que se planteo con las entidades y atributos es un trabajo inicial donde se decide mostrar las tablas relaciones y funciones de las mismas
+
+
  ## Modelo ER
+
+ ## Estructura de proyecto Front Backend y sql
+
+Este proyecto tomamos una acquitectura por capas para manejas de manera independiente tanto el Front como el Backend y las sentencias utilizadas para crear y agregar los datos a las tablas. 
+
+![image](https://github.com/maycolroa/Base_datos_ecci_final/assets/85509333/e74dfd3d-6282-4176-986d-e255faf7d160)
 
 
 ### Base_datos_ecci_final
