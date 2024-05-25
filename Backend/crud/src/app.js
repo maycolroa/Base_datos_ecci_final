@@ -1,9 +1,17 @@
 // Importar los módulos necesarios
 const express = require('express');
+const cors = require('cors');
 const clienteRoutes = require('./routes/clienteRoutes');
 
 // Crear una instancia de la aplicación Express
 const app = express();
+
+// Configurar CORS para permitir solicitudes desde el frontend
+app.use(cors({
+    origin: 'http://localhost:5173',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type']
+}));
 
 // Middleware para analizar solicitudes JSON
 app.use(express.json());
