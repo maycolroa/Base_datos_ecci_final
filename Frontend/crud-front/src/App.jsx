@@ -1,41 +1,46 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import CreateCliente from './components/CreateCliente';
+import ReadClientes from './components/ReadClientes';
+import UpdateCliente from './components/UpdateCliente';
+import DeleteCliente from './components/DeleteCliente';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
 
-function App() {
-  const [clientes, setClientes] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
-
-  const fetchClientes = async () => {
-    setLoading(true);
-    try {
-      const response = await axios.get('http://localhost:3000/api/clientes');
-      setClientes(response.data);
-    } catch (error) {
-      setError(error.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  return (
-    <div>
-      <h1>Listado de Clientes</h1>
-      <button onClick={fetchClientes} disabled={loading}>
-        {loading ? 'Cargando...' : 'Obtener Clientes'}
-      </button>
-      {error && <div>Error al cargar los clientes: {error}</div>}
-      {!loading && clientes.length > 0 && (
-        <ul>
-          {clientes.map((cliente) => (
-            <li key={cliente.ClienteID}>
-              Nombre: {cliente.Nombre}, Dirección: {cliente.Dirección}, Teléfono: {cliente.Teléfono}, Email: {cliente.Email}
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <Router>
+            <div className="container mt-4">
+                <h1 className="text-center mb-4">CRUD de Clientes ECCI Base de datos</h1>
+                <nav className="mb-4">
+                    <ul className="nav nav-pills nav-fill">
+                        <li className="nav-item">
+                            <Link to="/create" className="nav-link">Crear Cliente</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/read" className="nav-link">Listar Clientes</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/update" className="nav-link">Actualizar Cliente</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/delete" className="nav-link">Eliminar Cliente</Link>
+                        </li>
+                    </ul>
+                </nav>
+                <div className="content">
+                    <Routes>
+                        <Route path="/" element={<ReadClientes />} />
+                        <Route path="/create" element={<CreateCliente />} />
+                        <Route path="/read" element={<ReadClientes />} />
+                        <Route path="/update" element={<UpdateCliente />} />
+                        <Route path="/delete" element={<DeleteCliente />} />
+                    </Routes>
+                </div>
+            </div>
+        </Router>
+    );
+};
 
 export default App;
+
