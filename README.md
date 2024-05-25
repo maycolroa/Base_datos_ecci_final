@@ -28,3 +28,15 @@ Se crearon los procedimientos almacenados en la carpeta de scripts a continuacio
 ![image](https://github.com/maycolroa/Base_datos_ecci_final/assets/85509333/67403127-613f-4b0b-9810-559a06b6a5fa)
 
 ![image](https://github.com/maycolroa/Base_datos_ecci_final/assets/85509333/8678b3cc-eafc-4adf-9b33-06a217309830)
+
+### updateCliente.js
+
+![image](https://github.com/maycolroa/Base_datos_ecci_final/assets/85509333/787b385d-a087-469d-bf77-5e91b010db86)
+
+![image](https://github.com/maycolroa/Base_datos_ecci_final/assets/85509333/af8a3370-cece-4329-ad31-b59d8c8d0f81)
+
+### updateCliente.js
+
+![image](https://github.com/maycolroa/Base_datos_ecci_final/assets/85509333/3234fc35-d48d-4328-8346-b5caeb482878)
+
+![image](https://github.com/maycolroa/Base_datos_ecci_final/assets/85509333/ea2aef45-6677-498b-87d0-d22d43d7f53b)
