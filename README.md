@@ -39,6 +39,15 @@ Despues se realizo la separacion de carpetas por funcionalidades se manejaro una
 
 ![image](https://github.com/maycolroa/Base_datos_ecci_final/assets/85509333/92694256-3bb2-4138-8937-86b5c847c45d)
 
+se manejaron los llamados de los servicios http para cada uno de los componentes los manejara por separados y tambien se dio la configuracion del json para darle la misma estructura a los servicios del backend y no entrara en conflicto 
+
+![image](https://github.com/maycolroa/Base_datos_ecci_final/assets/85509333/c7aee98d-4d5f-4aed-8220-14911d00b011)
+
+![image](https://github.com/maycolroa/Base_datos_ecci_final/assets/85509333/4ee70764-8611-44c8-b785-d18999aa8065)
+
+![image](https://github.com/maycolroa/Base_datos_ecci_final/assets/85509333/bad4d015-a58c-48fe-96e4-d7e629d4fded)
+
+![image](https://github.com/maycolroa/Base_datos_ecci_final/assets/85509333/50fa74eb-b4a7-4488-bc70-59daed561422)
 
  ## Modelo ER
 ![Captura de pantalla 2024-05-18 212200](https://github.com/maycolroa/Base_datos_ecci_final/assets/85509333/46f3f4cd-3015-436e-b899-5549819d14da)
