@@ -7,5 +7,4 @@ const db = require('../config/db');
     } catch (error) {
         console.error('Error:', error.message);
     }
-  })();
-  
+})();
