@@ -2,8 +2,6 @@
 Este repositorio tiene como finalidad mostrar el codigo usado para crear la base de datos de nuestra aplicacion para administrar servidores y el diagrama ER que se planteo con las entidades y atributos es un trabajo inicial donde se decide mostrar las tablas relaciones y funciones de las mismas
 
 
- ## Modelo ER
-
  ## Estructura de proyecto Front Backend y sql
 
 Este proyecto tomamos una acquitectura por capas para manejas de manera independiente tanto el Front como el Backend y las sentencias utilizadas para crear y agregar los datos a las tablas. 
@@ -34,13 +32,15 @@ Despues se realizo la separacion de carpetas por funcionalidades se manejaron 4 
 
 En el front se tomo la estructura basica de src y se decidio que el punto de entrada a la aplicacion fuera el main.jsx donde se realizo la configuraciones iniciales para mandar a llamar todos los componentes y se realizo la arquitectura de componentes con unica funcionalidad se utilizo axions para las peticiones http y booststrap para darle estilos
 
-
 ![image](https://github.com/maycolroa/Base_datos_ecci_final/assets/85509333/69719059-6857-4ba7-978a-307f1cf261a3)
 
 
+Despues se realizo la separacion de carpetas por funcionalidades se manejaro una carpeta de componentes que llaman las acciones que se pueden hacer en el crud se muestra a continuacion:
+
+![image](https://github.com/maycolroa/Base_datos_ecci_final/assets/85509333/92694256-3bb2-4138-8937-86b5c847c45d)
 
 
-### Base_datos_ecci_final
+ ## Modelo ER
 ![Captura de pantalla 2024-05-18 212200](https://github.com/maycolroa/Base_datos_ecci_final/assets/85509333/46f3f4cd-3015-436e-b899-5549819d14da)
 
 
